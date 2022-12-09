@@ -6,11 +6,18 @@
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="manifest" href="manifest.json"/>
 </head>
 
 <body>
   Hello world
   <script src="script.js"></script>
+  <!--   PWA step and service worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script>
 
  <!--
   This script places a badge on your repl's full-browser view back to your repl's cover

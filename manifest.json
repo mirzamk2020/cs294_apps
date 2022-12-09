@@ -1,0 +1,16 @@
+{
+  "theme_color": "#f69435",
+  "background_color": "#f69435",
+  "display": "standalone",
+  "scope" : "/",
+  "start_url": "/",
+  "name" : "Big Project",
+  "short_name": "Big Project",
+  "icons": [
+    {
+      "src": "./logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
