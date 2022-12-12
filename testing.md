@@ -1,0 +1,3 @@
+I asked my brother to test my big final app. I initially had no option for getting user's sizes for the random picture. My brother suggested to add option for sizes, but also added a default size for users that do not want to add sizes. I made those modifications. I think it improved a bit of user experience.
+
+For the user activity page, I kept track of the pages the pages the user visits inside the app. If I had more time, I would add more visualization for the each button action inside the app.

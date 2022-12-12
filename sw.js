@@ -1,8 +1,3 @@
-// self.addEventListener('fetch', (e) => {
-//   console.log(`[Service Worker] Fetched resource ${e.request.url}`);
-// });
-
-
 // Set a name for the current cache
 var cacheName = 'v3'; 
 
@@ -14,6 +9,7 @@ var cacheFiles = [
   './script.js',
   './indexDB.js',
   './visualCharts.js',
+  './manifest.webmanifest',
 ]
 
 

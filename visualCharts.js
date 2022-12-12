@@ -5,7 +5,7 @@ google.charts.setOnLoadCallback(drawChart);
 async function drawChart() {
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Type');
-  data.addColumn('number', 'Times');
+  data.addColumn('number', 'Count');
   
   let [home, img, location, data1] = await Promise.all([
     get("home"),

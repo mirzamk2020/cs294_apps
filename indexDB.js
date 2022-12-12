@@ -7,33 +7,30 @@ function initalizeDB(name) {
       database = null;
     }
     dbNamespace = name;
-
     if (database) {
       resolve();
       return;
     }
-
     let dbName = name == '' ? 'myDatabase' : 'myDatabase_' + name;
-    let dbReq = indexedDB.open(dbName, 2);
-
-    dbReq.onupgradeneeded = function(event) {
+    let DBrequest = indexedDB.open(dbName, 2);
+    DBrequest.onupgradeneeded = function(event) {
       database = event.target.result;
 
       if (!database.objectStoreNames.contains('data')) {
         data = database.createObjectStore('data', {autoIncrement: true});
       } else {
-        data = dbReq.transaction.objectStore('data');
+        data = DBrequest.transaction.objectStore('data');
       }
     }
-
-    dbReq.onsuccess = function(event) {
+    DBrequest.onerror = function(event) {
+      reject(`had error starting database ${event.target.errorCode}`);
+    }
+    DBrequest.onsuccess = function(event) {
       database = event.target.result;
       resolve();
     }
 
-    dbReq.onerror = function(event) {
-      reject(`had error starting database ${event.target.errorCode}`);
-    }
+    
   });
 }
 
@@ -82,4 +79,6 @@ function put(type, count) {
   });
 }
 
-const increaseVisit = type => get(type).then(e => put(type, (e?.count ?? 0) + 1))
+
+
+const increaseVisit = t => get(t).then(e => put(t, (e?.count ?? 0) + 1))
