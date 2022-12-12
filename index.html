@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="manifest" href="manifest.json"/>
   <title>Mirza's Big Project</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 
@@ -191,7 +191,6 @@
       <div class="mdc-card large">
         <div class="mdc-card__primary-action">
           <div class="mdc-card__media" id="vis"></div>
-          <div class="mdc-card__media" id="vis2"></div>
           <div class="demo-card__primary">
             <h2 class="demo-card__title mdc-typography mdc-typography--headline6">User's pages activity via IndexedDB</h2>
             <h3 class="mdc-typography--subtitle1">Your Pages Visit data shown above!</h3>
@@ -208,9 +207,16 @@
 
 
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="visualCharts.js"></script>
   <script src="indexDB.js"></script>
   <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script>
+  
 </body>
 </html>

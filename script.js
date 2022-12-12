@@ -94,7 +94,3 @@ document.querySelector('button[data-button="location_get"]').addEventListener('c
   })
   .catch(e => document.querySelector('#data_error').style.display = 'block')
 })
-
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js');
-}
