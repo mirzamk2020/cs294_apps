@@ -1,4 +1,84 @@
-html, body {
-  height: 100%;
-  width: 100%;
+
+
+.mdc-card {
+  width: 400px;
+  padding: 24px; 
+  margin: 12px; 
+  display: inline-block;
+}
+
+.large {
+  width: 500px; 
+}
+
+.mdc-top-app-bar {
+  background: hsl(250deg 85% 24%);
+}
+
+.mdc-list-item {
+  padding: 30px; 
+}
+
+
+.mdc-list-item__text {
+  padding-left: 10px;
+}
+
+.mdc-card__actions {
+  padding: 0px;
+}
+
+#random_image {
+  display: none;
+}
+
+#random_image > .mdc-card {
+  grid-area: 2 / 2;
+} 
+
+.mdc-text-field {
+  margin-top: 10px;
+  width: 200px;
+}
+
+.screens:not(#home) {
+  display: none;
+}
+
+
+#random_image > div > div.mdc-card__primary-action > div.mdc-card__media.mdc-card__media--16-9 {
+  background-size: contain;
+}
+
+.hide {
+  display: none;
+}
+
+#location {
+  width: 100vw; 
+  grid-auto-flow: row;
+}
+
+#location_results {
+  height: 300px;
+}
+
+#city::before {
+  content: 'City: '
+}
+
+#subdivision::before {
+  content: 'Subdivision/State: '
+}
+
+#country::before {
+  content: 'Country: '
+}
+
+#continent::before {
+  content: 'Continent: '
+}
+
+#data > .big {
+  width: 70vw; 
 }

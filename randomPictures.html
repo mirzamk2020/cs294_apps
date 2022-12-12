@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+   <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="manifest" href="manifest.json"/>
+</head>
+
+<body>
+  
+<!--   <aside class="mdc-drawer mdc-drawer--modal">
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page" tabindex="0">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">list</i>
+          <span class="mdc-list-item__text">Random Picture</span>
+        </a>
+        <a class="mdc-list-item" href="#" id="openSearchModal">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">list</i>
+          <span class="mdc-list-item__text">Something else</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="mdc-drawer-scrim"></div>
+
+  <header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+          aria-label="Open navigation menu">menu</button>
+        <span class="mdc-top-app-bar__title">Big Pictures App</span>
+      </section>
+    </div>
+  </header> -->
+
+  
+
+<!--   <script src="script.js"></script> -->
+  
+<!--   <script>
+    const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+    const topAppBar = new mdc.topAppBar.MDCTopAppBar(topAppBarElement);
+    
+    const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+    const listElement1 = document.querySelector('.mdc-drawer .mdc-list');
+    
+    
+    listElement1.addEventListener('click', (event) => {
+      drawer.open = false;
+    });
+    
+    document.querySelector(".mdc-top-app-bar__navigation-icon").addEventListener('click', () => {
+      drawer.open = true;
+    })
+
+
+  </script> -->
+  
+  <!--   PWA step and service worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script>
+
+ <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+
+
+
+  
+</body>
+
+</html>
